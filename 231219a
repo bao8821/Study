@@ -1,0 +1,33 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int Max(int x, int y)
+{
+	if (x > y)
+		return x;
+	else
+		return y;
+}
+int main()
+{
+	int num1 = 10;
+	int num2 = 20;
+	int max = 0;
+    max = Max(num1, num2);
+	printf("%d is the biger one.", max);
+	//if (num1 > num2)
+	//	printf("%d is the biger one.", num1);
+	//else
+	//	printf("%d is the biger one.", num2);
+
+	//int t = 0;
+	//printf("%d\n", sizeof(char));
+	//printf("%d\n", sizeof(short));
+	//printf("%d\n", sizeof(int));
+	//printf("%d\n", sizeof(long));
+	//printf("%d\n", sizeof(long long));
+	//printf("%d\n", sizeof(float));
+	//printf("%d\n", sizeof(double)); 
+	//scanf("%d\n", t);
+
+	return 0;
+}
