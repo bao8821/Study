@@ -9,8 +9,9 @@ int main()
 	scanf("%d", &n);
 	for (i = 1; i <= n; i++)
 	{
-		for (j = 1,ret = 1; j <= i; j++)
-			ret = ret * j;
+		//for (j = 1,ret = 1; j <= i; j++) 代码效率低，反复相乘
+		//	ret = ret * j;
+		ret = ret * i;//效率高
 		sum += ret;
 	}
 	printf("1到%d的阶乘之和为%d.", n,sum);
