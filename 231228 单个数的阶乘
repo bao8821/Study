@@ -3,10 +3,11 @@
 int main()
 {
 	int n,i;
-	int sum = 1;
+	int ret = 1;
 	printf("请输入待计算数字：");
 	scanf("%d", &n);
 	for (i = 1; i <= n; i++)
-		sum = sum * i;
-	printf("%d的阶乘为%d.", n,sum);
+		ret = ret * i;
+	printf("%d的阶乘为%d.", n,ret);
+	return 0;
 }
