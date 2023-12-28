@@ -3,7 +3,7 @@
 int main()
 {
 	int n,i;
-	int ret = 1;
+	int ret = 1;//不考虑溢出的情况
 	printf("请输入待计算数字：");
 	scanf("%d", &n);
 	for (i = 1; i <= n; i++)
