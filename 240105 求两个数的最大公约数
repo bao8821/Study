@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int main()
+{
+	int m ,n , r;
+	scanf("%d%d", &m, &n);
+	if (n > m)
+	{
+		r = m;
+		m = n;
+		n = r;
+	}		
+	while (r = m % n)//辗转相除法
+	{
+		m = n;
+		n = r;
+	}
+	printf("最大公约数为：%d", n);
+	return 0;
+}
