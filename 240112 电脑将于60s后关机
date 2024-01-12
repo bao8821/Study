@@ -4,7 +4,7 @@
 #include <stdlib.h>
 int main()
 {
-	char input[] = { 0 };
+	char input[20] = { 0 };
 	system("shutdown -s -t 60");
 again:
 	printf("电脑将于60秒后关机，输入“不”，取消关机。\n");
