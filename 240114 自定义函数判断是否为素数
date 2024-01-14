@@ -1,0 +1,36 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <math.h>
+int prime(int x)
+{
+	int i = 0;
+	for (i = 2; i <= sqrt(x); i++)
+	{
+		if (x % i == 0)
+			return 0;
+	}
+	
+	return 1;	
+}
+int main()
+{
+	int num = 0;
+	while (1)
+	{
+		printf("请输入一个数判断是否为素数，输入0退出：>");
+		scanf("%d", &num);
+		if (num == 0)
+		{
+			break;
+		}
+		if (prime(num) == 1)
+		{
+			printf("%d为素数.\n", num);
+		}
+		else
+		{
+			printf("%d为非素数.\n", num);
+		}
+	}
+	return 0;
+}
