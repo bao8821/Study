@@ -1,0 +1,34 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int is_leap(int x)
+{
+	int i = 0;
+	if ((x % 4 == 0 && x % 100 != 0) || x % 400 == 0)
+	{
+		return 1;
+	}
+	else
+		return 0;		
+}
+int main()
+{
+	int year = 0;
+	while (1)
+	{
+		printf("请输入一个年份判断是否为闰年，输入0退出：>");
+		scanf("%d", &year);
+		if (year == 0)
+		{
+			break;
+		}
+		if (is_leap(year) == 1)
+		{
+			printf("%d为闰年.\n", year);
+		}
+		else
+		{
+			printf("%d为非闰年.\n", year);
+		}
+	}
+	return 0;
+}
