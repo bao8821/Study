@@ -1,0 +1,8 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int main()
+{
+	printf("%d", printf("%d", printf("%d", 43)));
+	//printf函数的返回值是被打印字符的个数
+	return 0;
+}
