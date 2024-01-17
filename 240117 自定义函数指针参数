@@ -1,0 +1,13 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+void add(int* p)
+{
+	(*p)++;//++的优先级比*高
+}
+int main()
+{
+	int num = 0;
+	add(&num);
+	printf("%d",num );
+	return 0;
+}
