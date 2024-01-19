@@ -1,0 +1,35 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int fac1(int n)//循环求阶乘
+{
+	int i = 0;
+	int ret = 1;
+	for (i = 1; i <= n; i++)
+	{
+		ret *= i;
+	}
+	return ret;
+}
+int fac2(int n)//递归求阶乘
+{
+	if (n > 1)
+		return n * fac2(n - 1);
+	else
+		return 1;
+}
+int main()
+{
+	int n = 0;
+	while (1)
+	{
+		printf("请输入一个数以求阶乘，输入0退出：>");
+		scanf("%d", &n);
+		if (n != 0)
+		{
+			printf("%d! = %d\n", n, fac2(n));
+		}
+		else
+			break;
+	}
+	return 0;
+}
