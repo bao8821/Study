@@ -1,0 +1,46 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+//int count;
+//int fib(int n)//该代码效率低
+//{
+//	if (n == 3)//了解该代码重复计算程度
+//	{
+//		count++;
+//	}
+//	if (n > 2)
+//		return fib(n - 2) + fib(n - 1);
+//	else
+//		return 1;
+//}
+int fib(int n)
+{
+	int a = 1;
+	int b = 1;
+	int c = 1;
+	while (n > 2)
+	{
+		c = a + b;
+		a = b;
+		b = c;
+		n--;
+	}
+	return c;
+}
+int main()
+{
+	int n = 0;
+	while (1)
+	{
+		printf("请输入一个数以求斐波那契数，输入0退出：>");
+		scanf("%d", &n);
+		if (n != 0)
+		{
+			//printf("%d的斐波那契数为%d,3的斐波那契数重复计算%d次.\n", n, fib(n),count);
+			//count = 0;
+			printf("%d的斐波那契数为%d.\n", n, fib(n));
+		}
+		else
+			break;
+	}
+	return 0;
+}
