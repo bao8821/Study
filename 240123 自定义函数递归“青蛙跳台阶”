@@ -1,0 +1,41 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+void print(char x, char y)
+{
+	printf("%c -> %c\n", x, y);
+}
+void move(int n, char start, char temp, char end)
+{
+	if (n == 1)
+	{
+		print(start, end);
+	}
+	else
+	{
+		move(n - 1, start, end, temp);
+		print(start, end);
+		move(n - 1, temp, start, end);
+	}
+}
+int main()
+{
+	int num = 0;	
+	while (1)
+	{
+		printf("请输入圆盘数，退出请输0：");
+		scanf("%d", &num);
+		if (num == 0)
+		{
+			break;
+		}
+		else if (num > 0)
+		{
+			move(num, 'A','B','C');
+		}
+		else
+		{
+			printf("请输入正整数。\n");
+		}
+	}
+	return 0;
+}
