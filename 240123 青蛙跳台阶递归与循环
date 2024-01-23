@@ -1,0 +1,56 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int jump1(int n)//递归
+{
+	if (n > 2)
+	{
+		return jump(n - 1) + jump(n - 2);
+	}
+	else if(n<3&&n>0)
+	{
+		return n;
+	}
+	else
+	{
+		return 0;
+	}
+}
+int jump(int n)//循环
+{
+	int a = 1;
+	int b = 2;
+	int c = 0;
+	if (n < 3)
+	{
+		return n;
+	}
+	while (n > 2)
+	{
+		c = a + b;
+		a = b;
+		b = c;
+		n--;
+	}
+	return c;
+}
+int main()
+{
+	int num;
+	while (1)
+	{
+		printf("请输入跳台数，退出请输0：");
+		scanf("%d", &num);
+		if (num == 0)
+		{
+			break;
+		}
+		else if (num > 0)
+		{
+			printf("青蛙跳%d个台阶的可能情况为%d种。\n",num, jump1(num)); 
+		}
+		else
+		{
+			printf("请输入正整数。\n");
+		}
+	}
+}
