@@ -1,0 +1,10 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	char arr[] = "abcdef";
+	printf("%d\n", sizeof(arr));//求数组所占空间大小
+	printf("%d\n", strlen(arr));//求数组元素个数
+	return 0;
+}
