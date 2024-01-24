@@ -3,8 +3,11 @@
 #include <string.h>
 int main()
 {
-	char arr[] = "abcdef";
-	printf("%d\n", sizeof(arr));//求数组所占空间大小
-	printf("%d\n", strlen(arr));//求数组元素个数
+	char arr1[] = "abcdef";
+	char arr2[] = {'a','b','c','d','e','f'};
+	printf("%d\n", sizeof(arr1));//求字符串数组所占空间大小，结果为7
+	printf("%d\n", sizeof(arr2));//比上面的少一个元素'\0'，结果为6
+	printf("%d\n", strlen(arr1));//求字符串数组元素个数，结果为6
+	printf("%d\n", strlen(arr2));//结果取决于'\0'的位置，结果为随机值
 	return 0;
 }
