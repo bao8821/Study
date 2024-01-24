@@ -1,0 +1,13 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int main()
+{
+	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+	int zs = sizeof(arr) / sizeof(arr[0]);
+	int i = 0;
+	for (i = 0; i < 10; i++)//一维数组在内存的排布情况，每个元素地址差4
+	{
+		printf("&arr[%d] = %p\n", i,&arr[i]);
+	}
+	return 0;
+}
