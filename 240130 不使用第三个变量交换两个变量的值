@@ -1,0 +1,18 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <limits.h>
+int main()
+{
+	int a = 3;
+	int b = 5;
+	printf("整形最大值为%d\n", INT_MAX);//2147483647
+	printf("交换前：a=%d,b=%d\n", a, b);
+	a = a ^ b;//异或位运算不产生进位，不会溢出
+	b = a ^ b;
+	a = a ^ b;
+	//a = a + b;//该算法有整形溢出的问题
+	//b = a - b;
+	//a = a - b;
+	printf("交换后：a=%d,b=%d", a, b);
+	return 0;
+}
