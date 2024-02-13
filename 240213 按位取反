@@ -1,0 +1,10 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+
+#include <stdio.h>
+
+int main()
+{
+	int a = 0;
+	printf("~a = %d", ~a);//0为正数，按位取反后为-1的补码，于是输出-1
+	return 0;
+}
