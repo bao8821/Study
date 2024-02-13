@@ -1,0 +1,12 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+
+#include <stdio.h>
+
+int main() 
+{
+	short s = 0;
+	int a = 10;
+	printf("sizeof(s = a + 5) = %d\n", sizeof(s = a + 5));
+	printf("s = %d", s);
+	return 0;
+}
