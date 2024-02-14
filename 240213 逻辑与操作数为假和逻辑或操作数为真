@@ -1,0 +1,12 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+
+#include <stdio.h>
+
+int main()
+{
+	int i = 0, a = 1, b = 2, c = 3, d = 4;
+	//i = a++ && ++b && d++;//由于a++是0，所以逻辑与运算不需要计算后面的值，直接为0，所以++b和d++不进行运算，所以值不变
+	i = a++ || ++b || d++;
+	printf("a = %d\nb = %d\nc = %d\nd = %d\n", a,b,c,d);
+	return 0;
+}
