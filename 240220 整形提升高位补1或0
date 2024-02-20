@@ -1,0 +1,23 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+
+#include <stdio.h>
+
+int main()
+{
+	char a = 0xb6;
+	short b = 0xb600;
+	int c = 0xb6000000;
+	if (a == 0xb6)
+	{
+		printf("a");//发生整形提升，高位统统补1
+	}
+	if (b == 0xb600)
+	{
+		printf("b");//发生整形提升，高位统统补1
+	}
+	if (c == 0xb6000000)
+	{		
+		printf("c");
+	}
+	return 0;
+}
