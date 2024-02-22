@@ -1,0 +1,13 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+
+#include <stdio.h>
+
+int main()
+{
+	int a = 0x11223344;
+	int* pa = &a;
+	char* pc = &a;
+	printf("pa = %p , pa + 1 = %p\n", pa, pa + 1);
+	printf("pa = %p , pc + 1 = %p", pc, pc + 1);
+	return 0;
+}
