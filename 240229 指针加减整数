@@ -9,7 +9,11 @@ int main()
 	float* vp;
 	for (vp = &values[0]; vp < &values[N_VALUE];) //表示数组最后一个元素后的地址
 	{
-		*vp++ = 0;//后置++，先运行赋值语句，再进行自加运算
+		*vp++ = 0;//后置++，先运行赋值运算，再进行自加运算
+	}
+        for (vp = &values[N_VALUE]; vp > &values[0];)
+	{
+		*--vp = 0;//前置--，先运行自加运算，再进行赋值运算
 	}
 	return 0;
 }
