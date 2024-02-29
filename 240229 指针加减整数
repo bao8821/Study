@@ -1,0 +1,15 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+
+#include <stdio.h>
+
+#define N_VALUE 5
+int main()
+{
+	float values[N_VALUE];
+	float* vp;
+	for (vp = &values[0]; vp < &values[N_VALUE];) //表示数组最后一个元素后的地址
+	{
+		*vp++ = 0;//后置++，先运行赋值语句，再进行自加运算
+	}
+	return 0;
+}
