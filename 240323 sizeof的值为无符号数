@@ -1,0 +1,19 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+
+#include <stdio.h>
+
+int i;//全局变量默认赋值为0
+
+int main()
+{
+	i--;
+	if (i > sizeof(i))//sizeof的值为无符号数，故将i也视为无符号数比较，此时i是一个极大的数
+	{
+		printf(">\n");
+	}
+	else
+	{
+		printf(">\n");
+	}
+	return 0;
+}
