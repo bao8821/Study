@@ -1,0 +1,12 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+
+#include <stdio.h>
+
+int main()
+{
+	int a = 0x11223344;
+	char* pa = &a;
+	*pa = 0;//数据倒着放在内存，故将后面的44改为00
+	printf("a = %x\n", a);
+	return 0;
+}
