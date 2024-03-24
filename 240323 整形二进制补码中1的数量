@@ -16,25 +16,38 @@
 //	return count;
 //}
 
+//int count_bit_one(int n)
+//{
+//	int count = 0;
+//	int i = 0;
+//	for (i = 0; i < 32; i++)
+//	{
+//		if (((n >> i) & 1) == 1) 
+//		{
+//			count++;
+//		}
+//	}
+//	return count;
+//}
+
 int count_bit_one(int n)
 {
 	int count = 0;
-	int i = 0;
-	for (i = 0; i < 32; i++)
+	while (n) 
 	{
-		if (((n >> i) & 1) == 1) 
-		{
-			count++;
-		}
+		n = n & (n - 1);//比以上两种方法更高效，循环次数少
+		count++;
 	}
 	return count;
 }
 
 int main()
 {
-	int a;
-	scanf("%d", &a);
-	int count = count_bit_one(a);
-	printf("count = %d\n", count);
-	return 0;
+	int a = 1;
+	while(a)
+	{
+		scanf("%d", &a);
+		int count = count_bit_one(a);
+		printf("count = %d\n输入0退出。\n", count);
+	}	
 }
