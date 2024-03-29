@@ -1,0 +1,24 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+
+#include <stdio.h>
+
+int digitsum(unsigned num)
+{
+	if (num > 9)
+	{
+		return num % 10 + digitsum(num / 10);
+	}
+	else
+	{
+		return num;
+	}
+}
+
+int main()
+{
+	int num = 0;
+	scanf("%d", &num);
+	int ret = digitsum(num);
+	printf("%d每位数相加为%d.", num, ret);
+	return 0;
+}
