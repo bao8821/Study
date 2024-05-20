@@ -1,0 +1,11 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+
+#include <stdio.h>
+
+int main()
+{
+	int a[5] = { 1,2,3,4,5 };
+	int* ptr = (int*)(&a + 1);//整个数组的地址向后移动一个单位即跳过整个数组
+	printf("%d,%d", *(a + 1), *(ptr - 1));//首元素地址向前或向后移动一个单位
+	return 0;
+}
