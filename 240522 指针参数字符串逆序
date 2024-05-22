@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+
+#include <stdio.h>
+#include <string.h>
+#include <assert.h>
+
+void reserve(char* str)
+{
+	assert(str);
+	int len = strlen(str);
+	char* left = str;
+	char* right = str + len - 1;
+	while (left < right)
+	{
+		char tmp = *left;
+		*left = *right;
+		*right = tmp;
+		left++;
+		right--;//若写错为++则陷入死循环
+	}
+}
+
+int main()
+{
+	char arr[100] = { 0 };
+	gets(arr);
+	reserve(arr);
+	printf("%s\n", arr);
+}
