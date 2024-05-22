@@ -26,4 +26,5 @@ int main()
 	gets(arr);
 	reserve(arr);
 	printf("%s\n", arr);
+        return 0;
 }
